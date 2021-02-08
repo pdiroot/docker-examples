@@ -1,0 +1,7 @@
+FROM nginx
+ENV NGINX_VERSION latest
+
+WORKDIR /usr/share/nginx/html
+
+RUN mkdir /usr/share/nginx/html/hello \
+    && echo "<h2>Hello</h2>" > /usr/share/nginx/html/hello/index.html
