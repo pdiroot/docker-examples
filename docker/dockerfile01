@@ -1,7 +1,4 @@
-FROM nginx
-ENV NGINX_VERSION latest
-
-WORKDIR /usr/share/nginx/html
+FROM nginx:1.19.6-alpine
 
 RUN mkdir /usr/share/nginx/html/hello \
-    && echo "<h2>Hello</h2>" > /usr/share/nginx/html/hello/index.html
+    && echo "Hello" > /usr/share/nginx/html/hello/index.html
