@@ -1,4 +1,0 @@
-FROM nginx:1.19.6-alpine
-
-RUN set -x \
-&&  sed -i "s#404.html;#&\n location /hello { \n default_type text/plain; \n return 200 'Hello'; \n } #g" /etc/nginx/conf.d/default.conf
