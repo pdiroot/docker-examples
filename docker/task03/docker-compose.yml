@@ -1,0 +1,13 @@
+version: '2'
+services:
+  proxy:
+    build:
+      context: .
+      dockerfile: nginx.Dockerfile
+    image: nginx-hello
+    ports:
+      - '80:80'
+  web:
+    image: containous/whoami:v1.5.0
+    ports:
+      - '81:80'
