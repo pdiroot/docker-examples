@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  proxy:
+    build:
+      context: nginx
+    ports:
+      - '80:80'
+      - '81:81'
+    links:
+      - web
+  web:
+    image: containous/whoami:v1.5.0
+    container_name: web
